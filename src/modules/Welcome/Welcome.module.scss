@@ -1,0 +1,19 @@
+.wrapper {
+    // height: 100%;
+    flex:1;
+    background: #ffffff;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(226, 240, 178, 1) 100%);
+    display: flex;
+}
+
+.wallpaper {
+    flex: 1;
+    margin: 50px 100px 0px 100px;
+    border-radius: 50px 50px 00px 0px;
+    background: url('welcome-background.png') center no-repeat;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

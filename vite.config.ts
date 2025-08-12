@@ -6,7 +6,8 @@ import path from 'path';
 export default defineConfig({
   resolve: {
     alias: [
-      {find: '@welcome', replacement: path.resolve(__dirname, 'src/modules/MainPage')},
+      {find: '@common', replacement: path.resolve(__dirname, 'src/modules/Common')},
+      {find: '@welcome', replacement: path.resolve(__dirname, 'src/modules/Welcome')},
     ]
   },
   plugins: [react()],
