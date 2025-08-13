@@ -8,6 +8,8 @@ export default defineConfig({
     alias: [
       {find: '@common', replacement: path.resolve(__dirname, 'src/modules/Common')},
       {find: '@welcome', replacement: path.resolve(__dirname, 'src/modules/Welcome')},
+      {find: '@missings', replacement: path.resolve(__dirname, 'src/modules/Missings')},
+      {find: '@report', replacement: path.resolve(__dirname, 'src/modules/Report')},
     ]
   },
   plugins: [react()],

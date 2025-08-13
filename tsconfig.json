@@ -23,7 +23,9 @@
     "baseUrl": ".",
     "paths": {
       "@common/*": ["./src/modules/Common/*"],
-      "@welcome/*": ["./src/modules/Welcome/*"]
+      "@welcome/*": ["./src/modules/Welcome/*"],
+      "@missings/*": ["./src/modules/Missings/*"],
+      "@report/*": ["./src/modules/Report/*"],
     }
   },
   "include": ["/src"],
