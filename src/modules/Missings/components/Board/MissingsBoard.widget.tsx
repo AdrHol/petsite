@@ -1,30 +1,19 @@
-import { useState, type FunctionComponent } from "react";
+import { type FunctionComponent } from "react";
 import styles from './MissingsBoard.module.scss'
-import {SelectButton} from 'primereact/selectbutton';
+import ControlPanel from "../ControlPanel/ControlPanel.widget";
+import MissingsDisplay from "../MissingsDisplay/MissingsDisplay.widget";
 
-const connectionButtonLabels = [
-  { label: 'On', value: 'On' },
-  { label: 'Off', value: 'Off' }
-];
 
+const data = [1,2,3,4];
 const MissingsBoard: FunctionComponent = () => {
-
-    const [local, setLocal] = useState(connectionButtonLabels[0]);
-
-    const onChange = (e: any) => {
-        setLocal(e);
-    }
-
     return (
     <div className={styles.missingsBoard}>
         <div className={styles.controls}>
-            <ul>
-                <li>
-                    <span>Tryb lokalny: </span> 
-                </li>
-            </ul>
+            <ControlPanel></ControlPanel>
         </div>
-        <div className={styles.display}></div>
+        <div className={styles.display}>
+            <MissingsDisplay records={data}></MissingsDisplay>
+        </div>
     </div>)
 }
 

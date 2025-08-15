@@ -1,0 +1,35 @@
+.box {
+    width: 4rem;
+    height: 2rem;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    background-color: #ededed;
+    border: 1px solid rgb(74, 74, 74);
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.box:hover {
+    
+    border: 1px solid rgb(56, 56, 70);
+}
+
+
+.switch {
+    height: 100%;
+    aspect-ratio: 1;
+   
+    border-radius: 0.4 rem;
+
+    &.off {
+         background-color: azure;
+    }
+
+    &.on {
+        background-color: #2bff2b;
+        -webkit-box-shadow: inset 2px 0px 8px 0px rgba(66, 68, 90, 1);
+        -moz-box-shadow: inset 2px 0px 8px 0px rgba(66, 68, 90, 1);
+        box-shadow: inset 2px 0px 8px 0px rgba(66, 68, 90, 1);
+    }
+}
