@@ -12,8 +12,8 @@ const MissingsDisplay: FunctionComponent<MissingsDashboardProps> = (props) => {
             <input 
                 className={styles.searchInput}
                 placeholder="Szukaj"></input>
-            <div>
-                {props.records.map(record => <Missing></Missing>)}
+            <div className={styles.missingsDisplay}>
+                {props.records.map((record, index)=> <Missing key={index}></Missing>)}
             </div>
         </>
     )

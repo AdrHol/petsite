@@ -27,20 +27,43 @@ const ControlPanel : FunctionComponent = () => {
                 listStyle: 'none'
             }}>
                 <li>
-                    <InputText id="city" placeholder="Miasto" value={inputValue} onChange={(e: any) => setInputValue(e.target.value)}/>
+                    <InputText 
+                        id="city" 
+                        placeholder="Miasto" 
+                        value={inputValue} 
+                        onChange={(e: any) => setInputValue(e.target.value)}
+                        style={{width:'100%'}}/>
                 </li>
                 <li>
                     <span>Kilometry</span>
-                    <InputText value={sliderValue} onChange={(e: any) => setSliderValue(e.target.value)} />
-                    <Slider value={sliderValue} onChange={(e: any) => setSliderValue(e.value)} />
+                    <InputText 
+                        value={sliderValue} 
+                        onChange={(e: any) => setSliderValue(e.target.value)} 
+                        style={{width:'100%'}}/>
+                    <Slider 
+                        value={sliderValue} 
+                        onChange={(e: any) => setSliderValue(e.value)} 
+                        style={{width:'100%'}}/>
                 </li>
                 <li>
-                    <MultiSelect value={selectedSpecies} onChange={(e: any) => setSelectedSpecies(e.value)} options={speciesTypes} optionLabel="name" 
-                        placeholder="Gatunek" maxSelectedLabels={3} className="w-full md:w-20rem" />
+                    <MultiSelect 
+                        value={selectedSpecies} 
+                        onChange={(e: any) => setSelectedSpecies(e.value)} 
+                        options={speciesTypes} optionLabel="name" 
+                        placeholder="Gatunek" 
+                        maxSelectedLabels={3} 
+                        className="w-full md:w-20rem" 
+                        style={{width:'100%'}}/>
                 </li>
                 <li>
-                    <MultiSelect value={selectedReports} onChange={(e: any) => setSelectedReports(e.value)} options={reportType} optionLabel="name" 
-                        placeholder="Zgłoszenie" maxSelectedLabels={3} className="w-full md:w-20rem" />
+                    <MultiSelect 
+                        value={selectedReports} 
+                        onChange={(e: any) => setSelectedReports(e.value)} 
+                        options={reportType} optionLabel="name" 
+                        placeholder="Zgłoszenie" 
+                        maxSelectedLabels={3} 
+                        className="w-full md:w-20rem" 
+                        style={{width:'100%'}}/>
                 </li>
             </ul>
     )

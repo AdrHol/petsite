@@ -1,29 +1,22 @@
+import Card from "@common/Components/Card/Card.widget";
 import type { FunctionComponent } from "react";
-import { Card } from 'primereact/card';
-import { Button } from 'primereact/button';
-
 
 const Missing: FunctionComponent = () => {
     
-        const header = (
-        <img alt="Card" src="https://primefaces.org/cdn/primereact/images/usercard.png" />
-    );
-    const footer = (
-        <>
-            <Button label="Save" icon="pi pi-check" />
-            <Button label="Cancel" severity="secondary" icon="pi pi-times" style={{ marginLeft: '0.5em' }} />
-        </>
-    );
-
     return (
-        <div className="card flex justify-content-center">
-            <Card title="Advanced Card" subTitle="Card subtitle" footer={footer} header={header} className="md:w-25rem">
-                <p className="m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae 
-                    numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-                </p>
+        <>
+            <Card 
+                componentsRatio={{
+                        img: '30%',
+                        content: '50%',
+                        footer: '20%'
+                    }}
+                title="Hello Title but some very large "
+                subtitle="Hello Subtitle"
+                >
+                {'Very Very long text to check if it will work fine if i have alot of content but it seems ok , bue'}
             </Card>
-        </div>
+        </>
     )
 }
 
