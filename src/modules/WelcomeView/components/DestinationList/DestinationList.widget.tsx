@@ -14,7 +14,7 @@ const DestinationList: FunctionComponent = () => {
     const navigate = useNavigate();
     return (
         <div style={{display: 'flex', justifyContent: 'space-around'}}>
-            {buttonsData.map(item =><button className={styles.destinationButton} onClick={() => navigate(item.path)}>
+            {buttonsData.map((item, index) =><button key={index} className={styles.destinationButton} onClick={() => navigate(item.path)}>
                 {item.text}
             </button>)}
         </div>

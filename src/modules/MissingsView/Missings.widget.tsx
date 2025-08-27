@@ -1,7 +1,7 @@
 import type { FunctionComponent } from 'react';
 import styles from './Missings.module.scss';
 import Wrapper from '@common/Components/Wrapper/Wrapper.widget';
-import MissingsBoard from './components/Board/MissingsBoard.widget';
+import MissingsBoard from './components/BoardComponent/MissingsBoard.widget';
 
 
 const Missings: FunctionComponent = () => {

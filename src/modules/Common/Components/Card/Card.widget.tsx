@@ -9,6 +9,7 @@ export interface CardProperties {
         content: string,
         footer: string
     },
+    onClick: () => void;
     title: string, 
     subtitle: string
     children: React.ReactNode
@@ -20,6 +21,7 @@ const initialCardProps: CardProperties = {
         content: '50%',
         footer: '20%'
     },
+    onClick: () => {},
     title:'default',
     subtitle: 'default',
     children: 'hello'
@@ -36,7 +38,9 @@ const Card : FunctionComponent<CardProperties> = (props) => {
     }
 
     return (
-        <div className={styles.cardContainer}>
+        <div className={styles.cardContainer}
+            onClick={() => props.onClick()}
+        >
             <div 
                 style={{
                     height: props.componentsRatio.img

@@ -1,9 +1,10 @@
 import type { FunctionComponent } from "react";
 import styles from './MissingsDisplay.module.scss';
-import Missing from "../Missing/Missing.widget";
+import Missing from "../MissingComponent/Missing.widget";
+import type { NarrowMissing } from "@common/data/NarrowMissing";
 
 export interface MissingsDashboardProps {
-    records : any[]
+    records : NarrowMissing[]
 }
 
 const MissingsDisplay: FunctionComponent<MissingsDashboardProps> = (props) => {
@@ -13,7 +14,7 @@ const MissingsDisplay: FunctionComponent<MissingsDashboardProps> = (props) => {
                 className={styles.searchInput}
                 placeholder="Szukaj"></input>
             <div className={styles.missingsDisplay}>
-                {props.records.map((record, index)=> <Missing key={index}></Missing>)}
+                {props.records.map(record=> <Missing key={record.id} data={record}></Missing>)}
             </div>
         </>
     )

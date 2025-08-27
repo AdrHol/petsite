@@ -2,6 +2,7 @@ import type { FunctionComponent } from "react";
 import type { MenuItem } from "primereact/menuitem";
 import styles from './Header.module.scss';
 import Switch from "@common/Components/Switch/Swtich.widget";
+import { Link } from "react-router";
 
 const navlinks: MenuItem[] =[
     {
@@ -35,13 +36,25 @@ const Header: FunctionComponent = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                gap: '10px',
                 listStyle: 'none'
             }}>
-                <li style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
+                <li className={styles.headerButtonHolder}>
+                    <label>Dodaj zgłoszenie</label>
+                    <Link to={'/report'}
+                        style={{
+                            padding: '5px',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            border: '1px solid grey',
+                            borderRadius: '3px',
+                            backgroundColor: 'aliceblue',
+                            color: 'black'
+                        }}
+                    >+</Link>
+                </li>
+                <li className={styles.headerButtonHolder}>
                     <label>Tryb lokalizacji: </label>
                     <Switch functionality={() => onSwitchChange()}></Switch>
                 </li>

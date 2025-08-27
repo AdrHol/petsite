@@ -15,9 +15,10 @@
     }
 }
 
-.cardContainer :hover {
+.cardContainer:hover {
     cursor: pointer;
-    box-shadow: 1px saddlebrown;
+    box-shadow:  1px rgb(0, 0, 0);
+    transform: scale(1.02);
 }
 
 .title {

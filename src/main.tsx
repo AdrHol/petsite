@@ -14,6 +14,7 @@ import 'primeicons/primeicons.css';
 const Home = lazy(() => import('@welcome/Welcome.widget.tsx'));
 const MissingsView = lazy(() => import('@missings/Missings.widget.tsx'));
 const ReportView = lazy(() => import('@report/Report.widget.tsx'));
+const DetailedMissing = lazy(() => import('@detailedMissing/DetailedMissingView.widget.tsx'));
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -24,8 +25,9 @@ createRoot(document.getElementById('root')!).render(
           <Route index element={<Home/>}></Route>
           <Route path={ApplicationPaths.MISSINGS}>
             <Route index element={<MissingsView/>}></Route>
-            <Route path={ApplicationPaths.REPORT} element={<ReportView/>}></Route>
+            <Route path={ApplicationPaths.DETAILED_MISSING} element={<DetailedMissing/>}></Route>
           </Route>
+          <Route path={ApplicationPaths.REPORT} element={<ReportView/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

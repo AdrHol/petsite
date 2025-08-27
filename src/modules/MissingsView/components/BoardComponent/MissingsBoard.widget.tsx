@@ -1,10 +1,22 @@
 import { type FunctionComponent } from "react";
 import styles from './MissingsBoard.module.scss'
-import ControlPanel from "../ControlPanel/ControlPanel.widget";
 import MissingsDisplay from "../MissingsDisplay/MissingsDisplay.widget";
+import ControlPanel from "../ControlPanelComponent/ControlPanel.widget";
+import type { NarrowMissing } from "@common/data/NarrowMissing";
 
 
-const data = [1,2,3,4];
+const data: NarrowMissing[] = [
+    {
+        id: '32314d',
+        title: 'Super kotek',
+        subtitle: 'maly rudy',
+        shortDescription: 'znaleziony na budowie'
+    }
+];
+
+
+
+
 const MissingsBoard: FunctionComponent = () => {
     return (
     <div className={styles.missingsBoard}>

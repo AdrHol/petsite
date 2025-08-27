@@ -23,9 +23,10 @@
     "baseUrl": ".",
     "paths": {
       "@common/*": ["./src/modules/Common/*"],
-      "@welcome/*": ["./src/modules/Welcome/*"],
-      "@missings/*": ["./src/modules/Missings/*"],
-      "@report/*": ["./src/modules/Report/*"],
+      "@welcome/*": ["./src/modules/WelcomeView/*"],
+      "@missings/*": ["./src/modules/MissingsView/*"],
+      "@report/*": ["./src/modules/ReportView/*"],
+      "@detailedMissing/*": ["./src/modules/DetailedMissingView/*"],
     }
   },
   "include": ["/src"],

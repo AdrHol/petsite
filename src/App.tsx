@@ -2,8 +2,8 @@ import { Suspense} from 'react'
 import './App.css'
 import { Outlet } from 'react-router'
 import { ProgressSpinner } from 'primereact/progressspinner';
-import Header from '@common/Header/Header.widget';
-import Footer from '@common/Footer/Footer.widget';
+import Header from '@common/Widgets/HeaderWidget/Header.widget';
+import Footer from '@common/Widgets/FooterWidget/Footer.widget';
          
 
 function App() {
