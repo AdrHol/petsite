@@ -1,0 +1,117 @@
+.box {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    input {
+        width: 100%;
+    }
+    textarea {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.mapSection{
+    grid-column: 4/6;
+    display: flex;
+    flex-direction: column;
+    > div {
+        width: 100%;
+        flex: 1;
+        border: 1px solid firebrick;
+    }
+}
+
+.dataContainer {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    height: 100%;
+    width: 100%;
+    .titleSpace {
+        grid-row: span 2;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.5rem ;
+        padding-left: 10px;
+    }
+    .subTitleSpace {
+        grid-row: span 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        background-color: aquamarine;
+    }
+    .descriptionSpace {
+        grid-row: span 5;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        background-color: chartreuse;
+    }
+    .localizationSpace {
+        grid-row: span 2;
+        display: flex;
+        width: 100%;
+        background-color: gold;
+        > div {
+            flex: 1;
+            height: 100%;
+        }
+        > div:hover {
+            border: 2px solid blue;
+        }
+        p {
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    .actionsSpace {
+        grid-row: span 2;
+        width: 100%;
+        background-color: blue;
+    }
+
+    .titleSpace:hover, .subTitleSpace:hover, .descriptionSpace:hover {
+        border: 2px solid blue;
+    }
+
+}
+
+.locationHolder, .contactHolder {
+    font-size: 0.8rem;
+    padding-left: 12px;
+}
+
+.photoSpace {
+
+}
+@media  (max-width: 619px) {
+    .dataContainer {
+        grid-column: 1 / -1;
+
+        .photoSpace, .mapSpace {
+            grid-row: span 4;
+        }
+        .titleSpace {
+            grid-row: span 1;
+        }
+        .actionsSpace {
+            grid-row: span 1;
+        }
+        .descriptionSpace {
+            grid-row: span 4;
+        }
+    }
+
+
+
+}

@@ -3,6 +3,7 @@ import type { MenuItem } from "primereact/menuitem";
 import styles from './Header.module.scss';
 import Switch from "@common/Components/Switch/Swtich.widget";
 import { Link } from "react-router";
+import useWindowSize from "@common/Hooks/useWindowSize.hook";
 
 const navlinks: MenuItem[] =[
     {
@@ -10,7 +11,7 @@ const navlinks: MenuItem[] =[
     }
 ] 
 const Header: FunctionComponent = () => {
-
+    const { isMobile } = useWindowSize();
 
     const onSwitchChange = () => {
         if(navigator.geolocation) {
@@ -31,7 +32,7 @@ const Header: FunctionComponent = () => {
             <div>
                 Here Will be logo
             </div>
-            <div>Kocie zycie </div>
+            { isMobile() ? '' : <div>Kocie zycie </div>}
             <ul style={{
                 display: 'flex',
                 justifyContent: 'center',
@@ -40,7 +41,10 @@ const Header: FunctionComponent = () => {
                 listStyle: 'none'
             }}>
                 <li className={styles.headerButtonHolder}>
-                    <label>Dodaj zgłoszenie</label>
+                    <Link to={'/missings'}>Szukaj</Link>
+                </li>
+                <li className={styles.headerButtonHolder}>
+                    {isMobile() ? '' : <label>Dodaj zgłoszenie</label>}
                     <Link to={'/report'}
                         style={{
                             padding: '5px',
@@ -55,7 +59,8 @@ const Header: FunctionComponent = () => {
                     >+</Link>
                 </li>
                 <li className={styles.headerButtonHolder}>
-                    <label>Tryb lokalizacji: </label>
+                    {isMobile() ? '' :  <label>Tryb lokalizacji: </label>}
+                    
                     <Switch functionality={() => onSwitchChange()}></Switch>
                 </li>
             </ul>
