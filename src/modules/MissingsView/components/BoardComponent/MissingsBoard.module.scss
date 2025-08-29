@@ -21,3 +21,11 @@
     grid-column: 3 / end;
     padding: 20px;
 }
+
+
+@media (max-width: 620px) {
+    .display {
+        grid-column: 1 / -1;
+        // padding: 20px;
+    }
+}

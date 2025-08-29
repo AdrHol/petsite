@@ -8,3 +8,9 @@
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 620px) {
+    .wallpaper {
+        margin: 0;
+    }
+}

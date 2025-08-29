@@ -51,3 +51,31 @@
   padding-left: 2px;
   padding-right: 2px;
 }
+
+@media (max-width: 620px ) {
+
+    .cardContainer {
+        width: 140px;
+        height: 200px;
+    }
+    
+    .textContent{
+        font-size: 0.8rem;
+    }
+
+    input {
+        font-size: 0.7rem;
+        padding: 0.4rem;
+    }
+    
+    span {
+        font-size: 0.8rem;
+    }
+    ul {
+        padding: 0;
+    }
+    div {
+        font-size: 0.7rem;
+        padding: 0.4rem;
+    }
+}

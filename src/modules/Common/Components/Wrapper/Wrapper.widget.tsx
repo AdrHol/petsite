@@ -7,7 +7,9 @@ interface Props {
 }
 
 const Wrapper: FunctionComponent<Props> = (props) => {
-return (<div className={styles.wrapper} style={props.style}>{props.children}</div>);
+return (<div className={styles.wrapper} 
+    style={props.style}>
+        {props.children}</div>);
 }
 
 
